@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const Live: NextPage = () => {
   return (
-    <div className="py-10 space-y-4 divide-y-2">
+    <div className="space-y-4 divide-y-2">
       {[1, 2, 3, 4, 5].map((_, index) => {
         return (
           <div className="pt-4 px-4" key={index}>
