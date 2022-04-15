@@ -3,9 +3,9 @@ import Layout from '../../components/layout'
 
 const Bought: NextPage = () => {
   return (
-    <Layout canGoBack>
+    <Layout canGoBack title='구매내역'>
       <div className='flex flex-col space-y-5 py-10'>
-        {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((_, i) => (
+        {[1, 1, 1, 1, 1, 1].map((_, i) => (
           <div key={i} className='flex border-b px-4 pb-4 cursor-pointer justify-between'>
             <div className='flex space-x-4'>
               <div className='w-20 h-20 bg-gray-400 rounded-md' />

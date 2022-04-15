@@ -41,7 +41,7 @@ export default function Layout({ title, canGoBack, children, hasTapBar }: Layout
       {hasTapBar ? (
         <nav className='bg-white max-w-xl text-gray-700 border-t fixed bottom-0 w-full px-10 pb-5 pt-3 flex justify-between text-xs'>
           <Link href={'/'} passHref>
-            <div className='flex flex-col items-center space-y-2 cursor-pointer'>
+            <div className={cls('flex flex-col items-center space-y-2 cursor-pointer', router.pathname === '/'? 'text-orange-500':'')  }>
               <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path
                   strokeLinecap='round'
@@ -55,7 +55,7 @@ export default function Layout({ title, canGoBack, children, hasTapBar }: Layout
           </Link>
 
           <Link href={'/community'} passHref>
-            <a className='flex flex-col items-center space-y-2 cursor-pointer'>
+            <a className={cls('flex flex-col items-center space-y-2 cursor-pointer', router.pathname === '/community'? 'text-orange-500':'')  }>
               <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path
                   strokeLinecap='round'
@@ -68,7 +68,7 @@ export default function Layout({ title, canGoBack, children, hasTapBar }: Layout
             </a>
           </Link>
           <Link href={'/chats'} passHref>
-            <a className='flex flex-col items-center space-y-2 cursor-pointer'>
+            <a className={cls('flex flex-col items-center space-y-2 cursor-pointer', router.pathname === '/chats'? 'text-orange-500':'')  }>
               <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path
                   strokeLinecap='round'
@@ -81,7 +81,7 @@ export default function Layout({ title, canGoBack, children, hasTapBar }: Layout
             </a>
           </Link>
           <Link href={'/live'} passHref>
-            <a className='flex flex-col items-center space-y-2 cursor-pointer'>
+            <a className={cls('flex flex-col items-center space-y-2 cursor-pointer', router.pathname === '/live'? 'text-orange-500':'')  }>
               <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path
                   strokeLinecap='round'
@@ -94,7 +94,7 @@ export default function Layout({ title, canGoBack, children, hasTapBar }: Layout
             </a>
           </Link>
           <Link href={'/profile'}>
-            <a className='flex flex-col items-center space-y-2 cursor-pointer'>
+            <a className={cls('flex flex-col items-center space-y-2 cursor-pointer', router.pathname === '/profile'? 'text-orange-500':'')  }>
               <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                 <path
                   strokeLinecap='round'
