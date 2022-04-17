@@ -19,5 +19,5 @@ model User{
   name String
   avatar String?
   createdTime DateTime @default(now())
-  updatedTime DateTime? @updatedAt
+  updatedTime DateTime @updatedAt
 }
