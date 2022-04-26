@@ -1,15 +1,37 @@
-import { useForm } from 'react-hook-form'
+import { useState } from 'react'
+import { FieldErrors, useForm } from 'react-hook-form'
+
+interface LoginForm {
+  userName: string
+  email: string
+  password: string
+  errors? : string
+}
 
 export default function Forms() {
-  const { register, handleSubmit } = useForm()
-  const onValid = () => {
-    console.log('im valid')
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    setError
+  } = useForm<LoginForm>({
+    mode : "onChange"
+  })
+  const onValid = (data: LoginForm) => {
+    
+    console.log(data)
+    setError("errors", {message : "backend is offline sorry."})
+  }
+
+  const onInvalid = (errors: FieldErrors) => {
+    console.log(errors)
   }
   return (
-    <form onSubmit={handleSubmit(onValid)}>
+    <form onSubmit={handleSubmit(onValid, onInvalid)}>
       <input
         {...register('userName', {
-          required: true,
+          required: 'userName is required',
         })}
         type={'text'}
         placeholder='UserName'
@@ -17,10 +39,14 @@ export default function Forms() {
       <input
         {...register('email', {
           required: true,
+          validate: {
+            notGmail: value => !value.includes('gmail.com') || 'gmail is not allowed',
+          },
         })}
         type={'email'}
         placeholder='UserEmail'
       />
+      {errors.email?.message}
       <input
         {...register('password', {
           required: true,
@@ -29,6 +55,7 @@ export default function Forms() {
         placeholder='Password'
       />
       <button>createAccount</button>
+      {errors.errors?.message}
     </form>
   )
 }
