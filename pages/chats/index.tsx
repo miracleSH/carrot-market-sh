@@ -1,7 +1,8 @@
+import Layout from '@components/layout'
+import Reply from '@components/reply'
 import type { NextPage } from 'next'
 import Link from 'next/link'
-import Layout from '../../components/layout'
-import Reply from '../../components/reply'
+
 
 const Chats: NextPage = () => {
   return (

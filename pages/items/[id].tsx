@@ -1,6 +1,7 @@
+import BasicProfile from '@components/basicProfile'
+import Layout from '@components/layout'
 import type { NextPage } from 'next'
-import BasicProfile from '../../components/basicProfile'
-import Layout from '../../components/layout'
+
 
 const ItemDetail: NextPage = () => {
   return (

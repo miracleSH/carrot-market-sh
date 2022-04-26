@@ -1,6 +1,7 @@
+import FlatBtn from '@components/flatbtn'
+import Layout from '@components/layout'
 import type { NextPage } from 'next'
-import FlatBtn from '../../components/flatbtn'
-import Layout from '../../components/layout'
+
 
 const Edit: NextPage = () => {
   return (

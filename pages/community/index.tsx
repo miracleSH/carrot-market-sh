@@ -1,7 +1,9 @@
+import CommunityBoard from '@components/communityBoard'
+import Layout from '@components/layout'
+import OrangeCircleBtn from '@components/orangeCircleBtn'
 import type { NextPage } from 'next'
-import CommunityBoard from '../../components/communityBoard'
-import Layout from '../../components/layout'
-import OrangeCircleBtn from '../../components/orangeCircleBtn'
+
+
 
 const Community: NextPage = () => {
   return (

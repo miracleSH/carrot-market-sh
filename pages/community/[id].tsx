@@ -1,9 +1,10 @@
+import BasicProfile from '@components/basicProfile'
+import CommunityBoard from '@components/communityBoard'
+import FlatBtn from '@components/flatbtn'
+import Layout from '@components/layout'
+import Reply from '@components/reply'
 import type { NextPage } from 'next'
-import BasicProfile from '../../components/basicProfile'
-import CommunityBoard from '../../components/communityBoard'
-import FlatBtn from '../../components/flatbtn'
-import Layout from '../../components/layout'
-import Reply from '../../components/reply'
+
 
 const CommunityPostDetail: NextPage = () => {
   return (

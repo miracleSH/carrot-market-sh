@@ -1,6 +1,5 @@
+import { cls } from "@libs/client/utils"
 import React from "react"
-import { cls } from "../libs/utils"
-
 interface MessageProps {
   text: string
   imagePath?: string

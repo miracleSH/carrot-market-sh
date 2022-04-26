@@ -1,8 +1,8 @@
+import FlatBtn from '@components/flatbtn'
+import useMutation from '@libs/client/useMutation'
+import { cls } from '@libs/client/utils'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import FlatBtn from '../components/flatbtn'
-import useMutation from '../libs/client/useMutation'
-import { cls } from '../libs/client/utils'
 
 interface EnterForm {
   email?: string
@@ -25,8 +25,6 @@ export default function Enter() {
   const onValid = (data: EnterForm) => {
     enter(data)
   }
-
-  console.log(loading, error, data)
 
   return (
     <div className='mt-16'>

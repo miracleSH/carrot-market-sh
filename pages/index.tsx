@@ -1,7 +1,10 @@
+import Item from '@components/item'
+import Layout from '@components/layout'
+import OrangeCircleBtn from '@components/orangeCircleBtn'
 import type { NextPage } from 'next'
-import Item from '../components/item'
-import Layout from '../components/layout'
-import OrangeCircleBtn from '../components/orangeCircleBtn'
+
+
+
 
 const Home: NextPage = () => {
   return (
