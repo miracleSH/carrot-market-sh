@@ -1,5 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
+export interface ResponseType {
+  ok: boolean
+}
+
 export default function withHandler(httpMethodType: 'GET' | 'POST' | 'PUT' | 'DELETE', fn: (req: NextApiRequest, res: NextApiResponse) => void) {
   return async function (req: NextApiRequest, res: NextApiResponse) {
     if(req.method !== httpMethodType){
